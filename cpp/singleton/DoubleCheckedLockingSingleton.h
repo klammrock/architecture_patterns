@@ -15,21 +15,20 @@
 class DoubleCheckedLockingSingleton
 {
 public:
-	static DoubleCheckedLockingSingleton* instance();
-	void do_work() const;
+  static DoubleCheckedLockingSingleton* instance();
+  void do_work() const;
 
 protected:
-	explicit DoubleCheckedLockingSingleton();
+  explicit DoubleCheckedLockingSingleton();
 
 // C++11 use = deleted
 private:
-	DoubleCheckedLockingSingleton(const DoubleCheckedLockingSingleton& rhs);
-	DoubleCheckedLockingSingleton& operator=(const DoubleCheckedLockingSingleton& rhs);
+  DoubleCheckedLockingSingleton(const DoubleCheckedLockingSingleton& rhs);
+  DoubleCheckedLockingSingleton& operator=(const DoubleCheckedLockingSingleton& rhs);
 
 private:
-	static std::atomic<DoubleCheckedLockingSingleton*> m_instance;
-	static std::mutex m_mutex;
+  static std::atomic<DoubleCheckedLockingSingleton*> m_instance;
+  static std::mutex m_mutex;
 };
 
 #endif // DOUBLE_CHECKED_LOCKING_SINGLETON_H
-
