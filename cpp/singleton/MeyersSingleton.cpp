@@ -4,6 +4,7 @@
 
 MeyersSingleton::MeyersSingleton()
 {
+  std::cout << "MeyersSingleton ctor" << std::endl;
 }
 
 MeyersSingleton& MeyersSingleton::instance()

@@ -7,6 +7,7 @@ std::mutex DoubleCheckedLockingSingleton::m_mutex;
 
 DoubleCheckedLockingSingleton::DoubleCheckedLockingSingleton()
 {
+  std::cout << "DoubleCheckedLockingSingleton ctor" << std::endl;
 }
 
 DoubleCheckedLockingSingleton* DoubleCheckedLockingSingleton::instance()
